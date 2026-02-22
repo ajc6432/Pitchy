@@ -12,9 +12,7 @@
 		4C074D472F4AB07100651E1D /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 4C074D462F4AB07100651E1D /* Quick */; };
 		4C074D492F4AB07100651E1D /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 4C074D482F4AB07100651E1D /* Nimble */; };
 		4C074D4A2F4AB07100651E1D /* Pitchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF49D21C2EE72E00343F13 /* Pitchy.framework */; };
-		4C074D4B2F4AB07100651E1D /* Pitchy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF49D21C2EE72E00343F13 /* Pitchy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4C074D4E2F4AB07100651E1D /* Pitchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF49DF1C2EE77A00343F13 /* Pitchy.framework */; };
-		4C074D4F2F4AB07100651E1D /* Pitchy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5DF49DF1C2EE77A00343F13 /* Pitchy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D512C1211C319917002DD504 /* FrequencyValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* FrequencyValidator.swift */; };
 		D512C1221C319917002DD504 /* FrequencyValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1201C319917002DD504 /* FrequencyValidator.swift */; };
 		D512C1241C319A40002DD504 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512C1231C319A40002DD504 /* Error.swift */; };
@@ -66,8 +64,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4C074D4B2F4AB07100651E1D /* Pitchy.framework in Embed Frameworks */,
-				4C074D4F2F4AB07100651E1D /* Pitchy.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,7 +744,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-Mac";
 				PRODUCT_NAME = Pitchy;
@@ -778,7 +774,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-Mac";
 				PRODUCT_NAME = Pitchy;
@@ -851,7 +847,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-Mac-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -876,7 +872,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vadymmarkov.Pitchy-Mac-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
