@@ -6,8 +6,6 @@ public struct NoteCalculator {
     public static let octave = 4
   }
 
-  public static let letters: [Note.Letter] = Note.Letter.sorted
-
   // MARK: - Bounds
 
   public static var indexBounds: (minimum: Int, maximum: Int) {
@@ -57,7 +55,7 @@ public struct NoteCalculator {
   public static func frequency(forIndex index: Int) throws -> Double {
     try validate(index: index)
 
-    let count = letters.count
+      let count = Note.Letter.allCases.count
     let power = Double(index) / Double(count)
 
     return pow(2, power) * Standard.frequency
@@ -66,7 +64,7 @@ public struct NoteCalculator {
   public static func letter(forIndex index: Int) throws -> Note.Letter {
     try validate(index: index)
 
-    let count = letters.count
+      let count = Note.Letter.allCases.count
     var lettersIndex = index < 0
       ? count - abs(index) % count
       : index % count
@@ -75,17 +73,17 @@ public struct NoteCalculator {
       lettersIndex = 0
     }
 
-    guard lettersIndex >= 0 && lettersIndex < letters.count else {
+      guard lettersIndex >= 0 && lettersIndex < Note.Letter.allCases.count else {
       throw PitchError.invalidPitchIndex
     }
 
-    return letters[lettersIndex]
+    return Note.Letter.sorted[lettersIndex]
   }
 
   public static func octave(forIndex index: Int) throws -> Int {
     try validate(index: index)
 
-    let count = letters.count
+    let count = Note.Letter.allCases.count
     let resNegativeIndex = Standard.octave - (abs(index) + 2) / count
     let resPositiveIndex = Standard.octave + (index + 9) / count
 
@@ -98,7 +96,7 @@ public struct NoteCalculator {
 
   public static func index(forFrequency frequency: Double) throws -> Int {
     try FrequencyValidator.validate(frequency: frequency)
-    let count = Double(letters.count)
+    let count = Double(Note.Letter.allCases.count)
 
     return Int(round(count * log2(frequency / Standard.frequency)))
   }
@@ -106,8 +104,8 @@ public struct NoteCalculator {
   public static func index(forLetter letter: Note.Letter, octave: Int) throws -> Int {
     try validate(octave: octave)
 
-    let count = letters.count
-    let letterIndex = letters.index(of: letter) ?? 0
+    let count = Note.Letter.allCases.count
+    let letterIndex = Note.Letter.sorted.index(of: letter) ?? 0
     let offset = letterIndex < 3 ? 0 : count
 
     return letterIndex + count * (octave - Standard.octave) - offset
