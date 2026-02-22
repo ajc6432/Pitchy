@@ -6,20 +6,7 @@ public struct NoteCalculator {
     public static let octave = 4
   }
 
-  public static var letters: [Note.Letter] = [
-    .A,
-    .ASharp,
-    .B,
-    .C,
-    .CSharp,
-    .D,
-    .DSharp,
-    .E,
-    .F,
-    .FSharp,
-    .G,
-    .GSharp
-  ]
+  public static let letters: [Note.Letter] = Note.Letter.sorted
 
   // MARK: - Bounds
 
