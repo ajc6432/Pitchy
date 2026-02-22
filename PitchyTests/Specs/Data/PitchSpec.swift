@@ -3,8 +3,7 @@ import Quick
 import Nimble
 
 class PitchSpec: QuickSpec {
-
-  override func spec() {
+  override class func spec() {
     let offsets = [
       (frequency: 445.0,
         lower: Pitch.Offset(note: try! Note(index: 0), frequency: 5,
@@ -34,7 +33,7 @@ class PitchSpec: QuickSpec {
       }
     }
 
-    describe("Pitch") {
+      describe("Pitch") {
       describe("#init") {
         it("sets correct values for the specified frequency") {
           offsets.forEach {

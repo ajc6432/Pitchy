@@ -3,7 +3,7 @@ import Quick
 import Nimble
 
 class FrequencyValidatorSpec: QuickSpec {
-  override func spec() {
+    override class func spec() {
     describe("FrequencyValidator") {
       describe(".isValid:frequency") {
         it("is invalid if frequency is higher than maximum") {

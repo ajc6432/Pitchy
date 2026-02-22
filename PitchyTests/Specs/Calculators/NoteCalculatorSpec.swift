@@ -4,7 +4,7 @@ import Nimble
 
 class NoteCalculatorSpec: QuickSpec {
 
-  override func spec() {
+    override class func spec() {
     let notes = [
       (index: 0, note: Note.Letter.A, octave: 4, frequency: 440.0),
       (index: 12, note: Note.Letter.A, octave: 5, frequency: 880.000),

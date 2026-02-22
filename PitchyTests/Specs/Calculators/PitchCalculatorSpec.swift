@@ -4,7 +4,7 @@ import Nimble
 
 class PitchCalculatorSpec: QuickSpec {
 
-  override func spec() {
+    override class func spec() {
     let offsets = [
       (frequency: 445.0,
         lower: Pitch.Offset(note: try! Note(index: 0), frequency: 5,

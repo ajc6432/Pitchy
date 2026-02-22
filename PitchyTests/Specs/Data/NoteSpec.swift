@@ -4,7 +4,7 @@ import Nimble
 
 class NoteSpec: QuickSpec {
 
-  override func spec() {
+    override class func spec() {
     describe("Note.Letter") {
       describe(".values") {
         it("returns an array of 12 note letters") {

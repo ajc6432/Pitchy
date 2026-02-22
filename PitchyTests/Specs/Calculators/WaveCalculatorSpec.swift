@@ -3,7 +3,7 @@ import Quick
 import Nimble
 
 final class WaveCalculatorSpec: QuickSpec {
-  override func spec() {
+    override class func spec() {
     let waves = [
       (frequency: 440.0,
         wavelength: 0.7795,
