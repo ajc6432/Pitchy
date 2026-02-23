@@ -3,10 +3,10 @@ import PackageDescription
 
 let package = Package(
     name: "Pitchy",
-    products: [
-        .library(name: "Pitchy", targets: ["Pitchy"])
+    platforms: [
+        .iOS(.v18),
+        .macOS(.v14)
     ],
-    targets: [
-        .target(name: "Pitchy", dependencies: [], path: "Source")
-    ]
+    products: [ .library(name: "Pitchy", targets: ["Pitchy"]) ],
+    targets: [ .target(name: "Pitchy", path: "Source") ]
 )
