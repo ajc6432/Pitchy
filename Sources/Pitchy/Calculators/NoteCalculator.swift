@@ -105,7 +105,7 @@ public struct NoteCalculator {
     try validate(octave: octave)
 
     let count = Note.Letter.allCases.count
-    let letterIndex = Note.Letter.sorted.index(of: letter) ?? 0
+      let letterIndex = Note.Letter.sorted.firstIndex(of: letter) ?? 0
     let offset = letterIndex < 3 ? 0 : count
 
     return letterIndex + count * (octave - Standard.octave) - offset
