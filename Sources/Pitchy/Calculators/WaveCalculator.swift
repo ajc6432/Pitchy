@@ -30,7 +30,6 @@ public struct WaveCalculator {
     }
   }
 
-
   public static func isValid(period: Double) -> Bool {
     let bounds = periodBounds
     return period > 0.0

@@ -12,24 +12,24 @@ public struct Note {
         case A = "A"
         case ASharp = "A#"
         case B = "B"
-        
+
         public static var sorted: [Note.Letter] {
             return Self.allCases.sorted { $0.rawValue < $1.rawValue }
         }
     }
-    
+
     public let index: Int
     public let letter: Letter
     public let octave: Int
     public let frequency: Double
     public let wave: AcousticWave
-    
+
     public var string: String {
         return "\(self.letter.rawValue)\(self.octave)"
     }
-    
+
     // MARK: - Initialization
-    
+
     public init(index: Int) throws {
         self.index = index
         letter = try NoteCalculator.letter(forIndex: index)
@@ -37,7 +37,7 @@ public struct Note {
         frequency = try NoteCalculator.frequency(forIndex: index)
         wave = try AcousticWave(frequency: frequency)
     }
-    
+
     public init(frequency: Double) throws {
         index = try NoteCalculator.index(forFrequency: frequency)
         letter = try NoteCalculator.letter(forIndex: index)
@@ -45,7 +45,7 @@ public struct Note {
         self.frequency = try NoteCalculator.frequency(forIndex: index)
         wave = try AcousticWave(frequency: frequency)
     }
-    
+
     public init(letter: Letter, octave: Int) throws {
         self.letter = letter
         self.octave = octave
@@ -53,13 +53,13 @@ public struct Note {
         frequency = try NoteCalculator.frequency(forIndex: index)
         wave = try AcousticWave(frequency: frequency)
     }
-    
+
     // MARK: - Closest Notes
-    
+
     public func lower() throws -> Note {
         return try Note(index: index - 1)
     }
-    
+
     public func higher() throws -> Note {
         return try Note(index: index + 1)
     }
