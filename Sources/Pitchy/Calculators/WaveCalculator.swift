@@ -1,4 +1,4 @@
-public struct WaveCalculator {
+public struct WaveCalculator: Sendable {
   public static var wavelengthBounds: (minimum: Double, maximum: Double) {
     let minimum = try! wavelength(forFrequency: FrequencyValidator.maximumFrequency)
     let maximum = try! wavelength(forFrequency: FrequencyValidator.minimumFrequency)

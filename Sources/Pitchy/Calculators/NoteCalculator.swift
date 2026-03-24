@@ -1,7 +1,7 @@
 import Foundation
 
-public struct NoteCalculator {
-  public struct Standard {
+public struct NoteCalculator: Sendable {
+  public struct Standard: Sendable {
     public static let frequency = 440.0
     public static let octave = 4
   }

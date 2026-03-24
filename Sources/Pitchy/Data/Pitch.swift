@@ -1,4 +1,4 @@
-public struct Pitch {
+public struct Pitch: Sendable {
   public typealias Offset = (
     note: Note,
     frequency: Double,
@@ -6,7 +6,7 @@ public struct Pitch {
     cents: Double
   )
 
-  public struct Offsets {
+  public struct Offsets: Sendable {
     public let lower: Pitch.Offset
     public let higher: Pitch.Offset
 

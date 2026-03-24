@@ -16,7 +16,10 @@ let package = Package(
             name: "Pitchy",
             dependencies: [],
             path: "Sources/Pitchy",
-            swiftSettings: [.swiftLanguageMode(.v6)]
+            swiftSettings: [
+                            .swiftLanguageMode(.v6),
+                            SwiftSetting.enableUpcomingFeature("StrictConcurrency")
+            ]
         ),
         .testTarget(
             name: "PitchyTests",

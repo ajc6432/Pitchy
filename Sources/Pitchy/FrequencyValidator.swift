@@ -1,4 +1,4 @@
-public struct FrequencyValidator {
+public struct FrequencyValidator: Sendable {
   public static let minimumFrequency = 20.0
   public static let maximumFrequency = 4190.0
 

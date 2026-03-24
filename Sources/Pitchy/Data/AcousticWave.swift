@@ -1,4 +1,4 @@
-public struct AcousticWave {
+public struct AcousticWave: Sendable {
   public static let speed: Double = 343
 
   public let frequency: Double
