@@ -33,7 +33,6 @@ class NoteCalculatorSpec: QuickSpec {
 
                     expect(result.minimum).to(equal(expected.minimum))
                     expect(result.maximum).to(equal(expected.maximum))
-
                 }
             }
 
@@ -58,7 +57,6 @@ class NoteCalculatorSpec: QuickSpec {
                 }
 
                 it("is invalid if value is lower than minimum") {
-
                     let value = -100
                     let result = try! NoteCalculator.isValid(index: value)
                     expect(result).to(beFalse())
@@ -66,33 +64,26 @@ class NoteCalculatorSpec: QuickSpec {
                 }
 
                 it("is valid if value is within valid bounds") {
-
                     let value = 6
                     let result = try! NoteCalculator.isValid(index: value)
                     expect(result).to(beTrue())
-
                 }
             }
 
             describe(".isValid:octave") {
                 it("is invalid if value is higher than maximum") {
-
                     let value = 10
                     let result = try! NoteCalculator.isValid(octave: value)
                     expect(result).to(beFalse())
-
                 }
 
                 it("is invalid if value is lower than minimum") {
-
                     let value = -1
                     let result = try! NoteCalculator.isValid(octave: value)
                     expect(result).to(beFalse())
-
                 }
 
                 it("is valid if value is within valid bounds") {
-
                     let value = 2
                     let result = try! NoteCalculator.isValid(octave: value)
                     expect(result).to(beTrue())
