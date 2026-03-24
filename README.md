@@ -1,10 +1,11 @@
-![Pitchy](https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyPresentation.png)
+# ![Pitchy](https://github.com/vadymmarkov/Pitchy/blob/master/Resources/PitchyPresentation.png)
 
-[![CI Status](http://img.shields.io/travis/vadymmarkov/Pitchy.svg?style=flat)](https://travis-ci.org/vadymmarkov/Pitchy)
-[![Version](https://img.shields.io/cocoapods/v/Pitchy.svg?style=flat)](http://cocoadocs.org/docsets/Pitchy)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/Pitchy.svg?style=flat)](http://cocoadocs.org/docsets/Pitchy)
 [![Platform](https://img.shields.io/cocoapods/p/Pitchy.svg?style=flat)](http://cocoadocs.org/docsets/Pitchy)
+
+# Pitchy (Fork)
+
+> **Note:** This is a maintained fork of the original [Pitchy](https://github.com/vadymmarkov/Pitchy) library (see bottom for details)
 
 **Pitchy** provides a simple way to get a music pitch from a frequency. Other
 than that it has a bunch of useful data structures, calculators and helper
@@ -173,21 +174,13 @@ enum Error: ErrorType {
 
 ## Installation
 
-**Pitchy** is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Swift Package Manager (Recommended)
 
-```ruby
-pod 'Pitchy'
-```
+1. In Xcode, select **File > Add Packages...**
+2. Enter the URL of this fork: `https://github.com/ajc6432/Pitchy.git`
+3. Select the version or branch you wish to use.
 
-**Pitchy** is also available through [Carthage](https://github.com/Carthage/Carthage).
-To install just write into your Cartfile:
-
-```ruby
-github "vadymmarkov/Pitchy"
-```
-
-## Author
+## Original Author
 
 Vadym Markov, markov.vadym@gmail.com
 
@@ -199,3 +192,6 @@ file for more info.
 ## License
 
 **Pitchy** is available under the MIT license. See the LICENSE file for more info.
+
+## Why this fork?
+The original Pitchy project is an awesome library and excellent foundation for music theory math. However, it has not had recent activity, so I made this fork to modernize the library. Changes to the code are intentionally minimal and strictly for updates and moderinizing in an attempt to honor the original work of the original author. Perhaps some small bug fixes or quality of life changes down the road if needed, but no major changes are planned at this point in time.
