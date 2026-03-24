@@ -1,4 +1,4 @@
-enum PitchError: Error {
+enum PitchError: Error, Sendable {
   case invalidFrequency
   case invalidWavelength
   case invalidPeriod

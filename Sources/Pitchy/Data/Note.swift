@@ -1,5 +1,5 @@
-public struct Note {
-    public enum Letter: String, CaseIterable {
+public struct Note: Sendable {
+    public enum Letter: String, CaseIterable, Sendable {
         case C = "C"
         case CSharp = "C#"
         case D = "D"

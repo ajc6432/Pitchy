@@ -1,6 +1,6 @@
 import Foundation
 
-public struct PitchCalculator {
+public struct PitchCalculator: Sendable {
   public static func offsets(forFrequency frequency: Double) throws -> Pitch.Offsets {
     let note = try Note(frequency: frequency)
     let higherNote = try note.higher()
